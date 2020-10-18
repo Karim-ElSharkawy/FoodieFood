@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="item-section item-section-left row">
+    <div>
+      <img src="../../../../../assets/{{ itemObj.img }}" alt="..." />
+    </div>
+    <div class="item-info">
+      <h4 class="item-title double">
+        {{ itemObj.name }}
+        <span class="badge badge-warning">{{ itemObj.price }} Egp</span>
+      </h4>
+      <p class="item-desc">{{ itemObj.desc }}</p>
+      <button class="btn btn-lg btn-warning" (click)="setItemInCart()">
+        Order
+      </button>
+    </div>
+  </div>
+</div>

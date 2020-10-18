@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="left col-lg-6 col-md-12">
+    <app-normal-signup
+      (sendAccDetails)="bubbleAccData($event)"
+      signType="{{ signType }}"
+    ></app-normal-signup>
+  </div>
+  <div class="right col-lg-6 col-md-12">
+    <app-social-signup signType="{{ signType }}"></app-social-signup>
+  </div>
+</div>

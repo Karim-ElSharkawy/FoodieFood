@@ -1,0 +1,78 @@
+.checkout-bg {
+  background-color: var(--secondry-color);
+  padding: 25px 0px;
+}
+.checkout-section {
+  position: relative;
+  background-color: white;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  min-height: 603px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+table.checkout-table {
+  background-color: var(--fourth-color);
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.checkout-table td,
+table.checkout-table th {
+  padding: 5px 10px;
+}
+table.checkout-table tbody td {
+  font-size: 16px;
+  color: #ffffff;
+}
+table.checkout-table tr:nth-child(even) {
+  background: var(--main-color);
+}
+table.checkout-table thead {
+  background: #398aa4;
+}
+table.checkout-table thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+table.checkout-table tfoot td {
+  font-size: 13px;
+}
+table.checkout-table tfoot .links {
+  text-align: right;
+}
+table.checkout-table tfoot .links a {
+  display: inline-block;
+  background: #ffffff;
+  color: #398aa4;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.btn-remove {
+  background-color: var(--secondry-color);
+  border-color: var(--fourth-color);
+}
+
+input {
+  text-align: right;
+  color: white;
+  background-color: var(--secondry-color);
+  border-color: var(--fourth-color);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin-left: 20px;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.btn-order {
+  position: absolute;
+  bottom: 0px;
+  width: 100px;
+}

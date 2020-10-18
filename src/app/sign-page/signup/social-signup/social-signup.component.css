@@ -1,0 +1,44 @@
+.right-inner {
+  background-color: var(--sixth-color);
+}
+.loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  background-color: var(--sixth-color);
+  border-radius: 2px;
+}
+
+button.social-signin {
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover {
+  opacity: 0.95;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease;
+}
+button.social-signin:not(:last-child) {
+  margin-bottom: 1vw;
+}
+
+button.social-signin.facebook {
+  background: #32508e;
+}
+
+button.social-signin.twitter {
+  background: #55acee;
+}
+
+button.social-signin.google {
+  background: #dd4b39;
+}

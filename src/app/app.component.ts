@@ -5,13 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  Loggedin = false;
-  title = 'foodiefood';
-
-  isLoggedin() {
-    if (this.Loggedin) {
-      return true;
-    } else return false;
-  }
-}
+export class AppComponent {}

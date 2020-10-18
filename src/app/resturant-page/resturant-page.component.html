@@ -1,0 +1,19 @@
+<div class="menu-bg">
+  <div class="menu-section">
+    <app-resturant-header
+      [resturantName]="resturants[RRName].name"
+      [resturantDesc]="resturants[RRName].desc"
+      [resturantImg]="resturants[RRName].img"
+    ></app-resturant-header>
+    <app-resturant-menu
+      [itemMenuArr]="buffaloBurgerMenuArr"
+      (sendItem)="addItem($event)"
+    ></app-resturant-menu>
+  </div>
+</div>
+<div id="floating-item-number">
+  Items: <span class="badge badge-warning">{{ cartItemsNo }}</span>
+  <button class="btn btn-danger checkout-btn" (click)="checkOut()">
+    Checkout
+  </button>
+</div>

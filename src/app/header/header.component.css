@@ -1,0 +1,105 @@
+/* Beginning of Header */
+#top-logo {
+  height: auto;
+  background-color: #252525;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  transition: 0.2s ease;
+  width: 120px;
+}
+#top-logo:hover {
+  opacity: 0.95;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  transition: 0.2s ease;
+}
+.navbar {
+  background-color: var(--main-color) !important;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  border-bottom: 10px solid var(--fourth-color);
+}
+.navbar-toggler {
+  transition: box-shadow 0.2s ease;
+}
+.navbar-toggler:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.2s ease;
+}
+@media (max-width: 991px) {
+  .navbar .navbar-nav > a > i {
+    display: inline !important;
+    margin-right: 5px;
+  }
+  .nav-btn {
+    width: 30vw;
+  }
+}
+@media (max-width: 274px) {
+  #top-logo {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .navbar-toggler {
+    width: 95%;
+  }
+}
+
+.nav-link {
+  text-shadow: 0px 1px 1px black !important;
+}
+a.text-light:hover {
+  color: #dc3545 !important;
+  transition: 0.2s ease;
+}
+a.text-danger:hover {
+  color: var(--secondry-color) !important;
+  transition: 0.2s ease;
+}
+
+.navbar .nav-item span {
+  position: relative;
+  top: 3px;
+  color: #e0e0e0;
+  font-weight: 500;
+  display: inline-block;
+  padding: 0px 12px;
+  line-height: 2;
+}
+.navbar .nav-item span:hover {
+  color: whitesmoke;
+}
+.navbar .active span {
+  color: white;
+  font-weight: 500;
+}
+#userName {
+  color: white;
+}
+.navbar .navbar-nav > a > i {
+  display: block;
+  text-align: center;
+  color: #fe7f2d;
+}
+.navbar .nav-item i {
+  font-size: 18px;
+}
+.navbar .nav-item span {
+  position: relative;
+  top: 3px;
+}
+.nav-btn {
+  position: relative;
+  top: 9px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: var(--secondry-color) !important;
+}
+.nav-btn:hover {
+  background-color: var(--fourth-color) !important;
+  color: white;
+}
+.nav-btn.active {
+  background-color: var(--sixth-color) !important;
+  color: white;
+}
+/* End of Header */

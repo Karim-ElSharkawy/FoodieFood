@@ -1,0 +1,54 @@
+<div class="checkout-bg">
+  <div class="checkout-section">
+    <h2 class="checkout-title">Checkout</h2>
+    <hr />
+    <table class="checkout-table" id="checkout-Table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let orderItem of checkoutItems | keyvalue;
+            let indexOfelement = index
+          "
+          id="tb-row{{ indexOfelement + 1 }}"
+        >
+          <td>{{ orderItem.value.name }}</td>
+          <td class="priceloc">
+            {{ orderItem.value.price * orderItem.value.quantity }} Egp
+          </td>
+          <td>
+            <input
+              type="number"
+              class="form-control quantity"
+              name="quantity"
+              value="{{ orderItem.value.quantity }}"
+              (change)="valueChange(orderItem.key, indexOfelement)"
+              min="1"
+            />
+          </td>
+          <td>
+            <button
+              class="btn btn-danger btn-remove"
+              (click)="removeRowOfIndex(indexOfelement + 1)"
+            >
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button
+      class="btn my-5 btn-lg btn-danger btn-order"
+      (click)="doneCheckout()"
+    >
+      Order
+    </button>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<app-menu-partition
+  *ngFor="let itemSection of itemMenuArr | keyvalue; let indexNum = index"
+  (sendItem)="bubbleItemSent($event)"
+  [itemArr]="itemMenuArr[itemSection.key]"
+  [title]="itemSection.key"
+></app-menu-partition>

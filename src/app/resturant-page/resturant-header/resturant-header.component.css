@@ -1,0 +1,24 @@
+#menu-header-img {
+  width: 100%;
+  height: 100%;
+  margin-right: 20px;
+}
+#menu-text-section {
+  width: 100%;
+}
+hr {
+  border-top: 1px black solid;
+}
+
+#menu-header-title {
+}
+#menu-header-description {
+}
+
+@media (max-width: 991px) {
+  #menu-header-img {
+    margin-right: 0px;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+}

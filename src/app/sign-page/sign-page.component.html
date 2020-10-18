@@ -1,0 +1,14 @@
+<!-- Middle login box floating in middle -->
+
+<div id="login-box" class="container-fluid">
+  <app-signup
+    signType="Up"
+    (sendAccData)="accRecieve($event)"
+    *ngIf="router != '/login'"
+  ></app-signup>
+  <app-signup
+    signType="In"
+    (sendAccData)="accRecieve($event)"
+    *ngIf="router == '/login'"
+  ></app-signup>
+</div>

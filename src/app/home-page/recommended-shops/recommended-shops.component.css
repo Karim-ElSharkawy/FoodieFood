@@ -1,0 +1,13 @@
+.recommended-section {
+  color: white;
+  min-height: 70vh;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: var(--main-color);
+}
+
+.recommended-inner {
+  height: 100%;
+}

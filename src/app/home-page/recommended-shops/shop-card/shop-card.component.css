@@ -1,0 +1,46 @@
+.shopCard {
+  color: white;
+  padding: 5px;
+  min-height: 175px;
+  width: 100%;
+  background-color: var(--secondry-color);
+  margin-bottom: 15px;
+  border-radius: 2px;
+  padding-right: 10px;
+}
+.shopCard img {
+  height: 165px;
+  width: auto;
+  float: left;
+  margin-right: 10px;
+  background-color: black;
+}
+.shopCard h2 {
+  display: inline;
+}
+.shopCard p {
+  overflow-wrap: break-word;
+}
+a:hover {
+  text-decoration: none;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+@media (max-width: 424px) {
+  .shopCard {
+    padding-right: 5px;
+  }
+  .shopCard img {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}

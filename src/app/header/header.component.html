@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a routerLink="/home" class="navbar-brand">
+    <img src="../assets/top_logo.png" alt="..." id="top-logo" />
+  </a>
+  <button
+    type="button"
+    class="navbar-toggler"
+    data-toggle="collapse"
+    data-target="#navbarCollapse"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Collection of nav links, forms, and other content for toggling -->
+  <div
+    id="navbarCollapse"
+    class="collapse navbar-collapse justify-content-start"
+  >
+    <div class="navbar-nav ml-auto">
+      <a
+        href="#"
+        class="nav-item nav-link"
+        routerLink="home"
+        routerLinkActive="active"
+        ><span>Home</span></a
+      >
+      <a
+        href="#"
+        routerLink="/order"
+        routerLinkActive="active"
+        class="nav-item nav-link"
+        ><span>Order</span></a
+      >
+      <a href="#" class="nav-item nav-link"><span>Offers</span></a>
+      <a href="#" class="nav-item nav-link"><span>About Us</span></a>
+      <div class="nav-item ml-2 dropdown">
+        <a
+          id="userName"
+          *ngIf="isLoggedin()"
+          href="#"
+          data-toggle="dropdown"
+          class="nav-item nav-link dropdown-toggle user-action"
+          ><img src="../assets/empty-avatar.png" class="avatar" alt="Avatar" />
+          Antonio Moreno <b class="caret"></b
+        ></a>
+        <div *ngIf="!isLoggedin()">
+          <button
+            class="btn mr-1 nav-item nav-btn"
+            routerLinkActive="active"
+            routerLink="login"
+          >
+            Login
+          </button>
+          <button
+            class="btn nav-item nav-btn"
+            routerLinkActive="active"
+            routerLink="signup"
+          >
+            Signup
+          </button>
+        </div>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item"
+            ><i class="fa fa-user-o"></i> Profile</a
+          >
+          <a href="#" class="dropdown-item"
+            ><i class="fa fa-calendar-o"></i> Calendar</a
+          >
+          <a href="#" class="dropdown-item"
+            ><i class="fa fa-sliders"></i> Settings</a
+          >
+          <div class="divider dropdown-divider"></div>
+          <a href="#" class="dropdown-item"
+            ><i class="material-icons">&#xE8AC;</i> Logout</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
