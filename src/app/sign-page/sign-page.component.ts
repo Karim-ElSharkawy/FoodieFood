@@ -14,17 +14,41 @@ export class SignPageComponent implements OnInit {
     this.accountList.push({ userName: userName, password: password });
   }
   accRecieve(accData: object) {
-    this.accountList.forEach((account) => {
-      if ((accData as any).username == account.userName) {
-        confirm('Logged in, Welcome ' + (accData as any).username + '!');
-      } else {
-        this.accountList.push({
-          userName: (accData as any).username,
-          password: (accData as any).password,
-        });
-        confirm('Signed up, Welcome ' + (accData as any).username + '!');
-      }
-    });
+    let type = (accData as any).type;
+    let errorFlag = true;
+
+    if (type == 'In') {
+      this.accountList.forEach((account) => {
+        if (
+          (accData as any).username.toLowerCase() ==
+            account.userName.toLowerCase() &&
+          (accData as any).password.toLowerCase() ==
+            account.password.toLowerCase()
+        ) {
+          confirm('Logged in, Welcome ' + (accData as any).username + '!');
+          errorFlag = false;
+        }
+      });
+    } else {
+      this.accountList.forEach((account) => {
+        if (
+          (accData as any).username.toLowerCase() ==
+          account.userName.toLowerCase()
+        ) {
+          alert('username already exists! Please change the username.');
+        }
+      });
+      this.accountList.push({
+        userName: (accData as any).username.toLowerCase(),
+        password: (accData as any).password.toLowerCase(),
+      });
+      confirm('Signed up, Welcome ' + (accData as any).username + '!');
+      errorFlag = false;
+    }
+    if ((accData as any).type == 'In' && errorFlag) {
+      alert('Username or Password is incorrect!');
+    }
+    console.log('HELLO: ', this.accountList);
   }
   constructor(private _router: Router) {
     this.router = _router.url;

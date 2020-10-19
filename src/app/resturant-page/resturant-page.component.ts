@@ -85,6 +85,7 @@ export class ResturantPageComponent implements OnInit {
     });
   }
   public addItem(item: object): void {
+    /* Increment cartitem Number. add item to cartItems and add quantity property. */
     this.cartItemsNo++;
     if ((item as any).name in this.cartItems) {
       this.cartItems[(item as any).name]['quantity'] += 1;

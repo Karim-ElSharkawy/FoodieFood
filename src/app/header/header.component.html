@@ -40,7 +40,7 @@
           data-toggle="dropdown"
           class="nav-item nav-link dropdown-toggle user-action"
           ><img src="../assets/empty-avatar.png" class="avatar" alt="Avatar" />
-          Antonio Moreno <b class="caret"></b
+          {{ username }} <b class="caret"></b
         ></a>
         <div *ngIf="!isLoggedin()">
           <button
@@ -69,7 +69,7 @@
             ><i class="fa fa-sliders"></i> Settings</a
           >
           <div class="divider dropdown-divider"></div>
-          <a href="#" class="dropdown-item"
+          <a href="#" (click)="logOut()" class="dropdown-item"
             ><i class="material-icons">&#xE8AC;</i> Logout</a
           >
         </div>

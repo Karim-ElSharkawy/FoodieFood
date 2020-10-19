@@ -27,9 +27,16 @@ export class NormalSignupComponent implements OnInit {
     console.log(this.signForm.value.username);
     let username = this.signForm.value.username;
     let password = this.signForm.value.password;
-    this.sendAccDetails.emit({ username: username, password: password });
+    this.sendAccDetails.emit({
+      type: this.signType,
+      username: username,
+      password: password,
+    });
+    localStorage.setItem('LoggedIn', username);
 
     this.signForm.reset();
+
+    this._router.navigateByUrl('/home');
   }
   ngOnInit(): void {}
 }
